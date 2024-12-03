@@ -40,12 +40,11 @@ p {
     #drop-area {
         width: 90%;
     }
-
-    p {
-        font-size: 1.1em;
-    }
-    p::before {
-        padding: 10px;
+    #drop-area::after{
+        margin: 0px 0px 50px 0px;
         content: "Mobile is for Stupid";
+    }
+    p {
+        display: none;
     }
 }
