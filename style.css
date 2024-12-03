@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #121212, #1c1c1c);
+    color: #fff;
+    overflow: hidden;
+}
+
+#drop-area {
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#drop-area:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+p {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+
+@media (max-width: 768px) {
+    #drop-area {
+        width: 90%;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+    p::before {
+        padding: 10px;
+        content: "Mobile is for Stupid";
+    }
+}
