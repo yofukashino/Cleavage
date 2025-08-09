@@ -1,4 +1,4 @@
-document.body.addEventListener("paste", (event) => {
+document.addEventListener("paste", (event) => {
     const items = event.clipboardData.items;
     for (const item of items) {
         if (item.kind === "file" && item.type.startsWith("image")) {
@@ -8,7 +8,7 @@ document.body.addEventListener("paste", (event) => {
     }
 });
 
-document.body.addEventListener("drop", (event) => {
+document.addEventListener("drop", (event) => {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (file && file.type.startsWith("image")) {
