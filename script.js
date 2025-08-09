@@ -6,15 +6,17 @@ document.addEventListener("paste", (event) => {
             convertImageToURL(file);
         }
     }
-});
+}, false);
 
 document.addEventListener("drop", (event) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    if (file && file.type.startsWith("image")) {
-        convertImageToURL(file);
+    const items = event.dataTransfer.files;
+    for (const item of items) {
+        if (item.kind === "file" && item.type.startsWith("image")) {
+            const file = item.getAsFile();
+            convertImageToURL(file);
+        }
     }
-});
+}, false);
 
 function convertImageToURL(file) {
     const reader = new FileReader();
