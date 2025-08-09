@@ -37,14 +37,14 @@ p {
 
 
 @media only screen and (max-width: 768px) {
-    #drop-area {
+    .stupid #drop-area {
         width: 90%;
     }
-    #drop-area::after{
+   .stupid #drop-area::after{
         margin: 0px 0px 50px 0px;
         content: "Mobile is for Stupid";
     }
-    p {
+   .stupid p {
         display: none;
     }
 }
