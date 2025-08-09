@@ -12,9 +12,8 @@ document.addEventListener("paste", (event) => {
 document.addEventListener("drop", (event) => {
     event.preventDefault();
     const items = event.dataTransfer.files;
-    for (const item of items) {
-        if (item.kind === "file" && item.type.startsWith("image")) {
-            const file = item.getAsFile();
+    for (const file of items) {
+        if (file && file.type.startsWith("image")) {
             convertImageToURL(file);
         }
     }
